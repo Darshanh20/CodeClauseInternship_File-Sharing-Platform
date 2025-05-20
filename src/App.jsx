@@ -172,10 +172,16 @@ function App() {
         </div>
 
         {/* Expiry */}
+        <label
+          htmlFor="expiryInput"
+          className="text-white font-semibold mb-1 block max-w-xl mx-auto"
+        >
+          Add expiry date
+        </label>
         <input
           type="datetime-local"
           onChange={e => setExpiry(e.target.value)}
-          className="w-full border px-2 py-1 rounded text-white max-w-xl mx-auto"
+          className="w-full max-w-xl mx-auto rounded border border-gray-400 bg-gray-900 px-2 py-1 text-white"
         />
 
         <button
@@ -187,17 +193,17 @@ function App() {
       </div>
 
       {shareLink && (
-          <div className='text-center bg-blue-600 rounded-xl'>
-            <p className='text-black-400 font-bold'>Share this link:</p>
-            <a
-              href={shareLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white underline break-all hover:text-gray-300"
-            >
-              {shareLink}
-            </a>
-          </div>
+        <div className='text-center bg-blue-600 rounded-xl'>
+          <p className='text-black-400 font-bold'>Share this link:</p>
+          <a
+            href={shareLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white underline break-all hover:text-gray-300"
+          >
+            {shareLink}
+          </a>
+        </div>
       )}
     </div>
   );
