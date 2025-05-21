@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import IntroPage from './IntroPage';
-import ViewFile from './FileAccess'; // Make sure you have this file created
+import ViewFile from './FileAccess'; 
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

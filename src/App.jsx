@@ -3,7 +3,6 @@ import { supabase } from './supabaseClient';
 import bcrypt from 'bcryptjs';
 
 function App() {
-  // Your existing states here ...
   const [file, setFile] = useState(null);
   const [number, setNumber] = useState(false);
   const [characters, setCharacters] = useState(false);
@@ -12,7 +11,6 @@ function App() {
   const [shareLink, setShareLink] = useState('');
   const passwordRef = useRef(null);
 
-  // Password generator logic (same as before)
   const generatePassword = useCallback(() => {
     let pass = '';
     let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -31,13 +29,11 @@ function App() {
     generatePassword();
   }, [generatePassword]);
 
-  // Copy password function
   const copyPassword = () => {
     passwordRef.current?.select();
     window.navigator.clipboard.writeText(generatedPassword);
   };
 
-  // Handle upload (same as before)
   const handleUpload = async () => {
     if (!file) return alert('Please select a file.');
 
@@ -74,7 +70,6 @@ function App() {
     setShareLink(`${window.location.origin}/file/${data[0].id}`);
   };
 
-  // Drag & Drop Handlers
   const [dragActive, setDragActive] = useState(false);
 
   const handleDrag = (e) => {
@@ -102,10 +97,9 @@ function App() {
     <div className="p-6  mx-auto max-w-4xl flex flex-col gap-5">
       <h1 className="text-5xl font-bold mb-4 flex justify-center text-blue-600">ShareEZ</h1>
 
-      {/* Drag and Drop Area */}
       <form
         onDragEnter={handleDrag}
-        onSubmit={e => e.preventDefault()} // prevent submit on form enter key
+        onSubmit={e => e.preventDefault()} 
         className={`mb-4 p-6 border-4 border-dashed rounded cursor-pointer
           ${dragActive ? 'border-blue-600 bg-blue-50' : 'border-gray-300'}  h-50 flex items-center justify-center`}
         onDragLeave={handleDrag}

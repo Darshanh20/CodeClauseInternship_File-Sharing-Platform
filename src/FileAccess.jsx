@@ -4,7 +4,7 @@ import { supabase } from './supabaseClient';
 import bcrypt from 'bcryptjs';
 
 function FileAccess() {
-  const { id } = useParams(); // file ID passed in URL
+  const { id } = useParams(); 
   const [fileData, setFileData] = useState(null);
   const [passwordInput, setPasswordInput] = useState('');
   const [isUnlocked, setIsUnlocked] = useState(false);
