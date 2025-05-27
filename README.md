@@ -40,4 +40,5 @@ VITE_SUPABASE_ANON_KEY=your_anon_key
 - Clipboard support for copying links and passwords
 - Secure file viewer/download page
 
+DEVELOPED BY DARSHAN HOTCHANDANI
 
